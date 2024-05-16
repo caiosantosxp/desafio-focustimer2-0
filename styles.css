@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --hue: 194;
+
+  --button-bg-active: hsl(var(--hue), 97%, 31%);
+  --text-color-button-active: #fff;
+  --background: hsl(var(--hue), 86%, 77%);
+}
+
+html.tree {
+  --hue: 120;
+}
+
+html.rain {
+  --hue:194;
+}
+
+html.store{
+  --hue:40;
+}
+
+html.fire {
+  --hue: 0;
+}
+
+body, button, input {
+  font-size: 1.6rem;
+}
+
+body{
+  width: 100%;
+  background-color: var(--background);
+}
+
+main {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1200px;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+
+  place-items: center;
+
+  color: var(--button-bg-active);
+  
+}
+
+#container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container1 span{
+  font-family: 'Roboto', sans-serif;
+  
+  font-size: 12.0rem;
+  font-weight: 500;
+}
+
+#controlsTools {
+  display: flex;
+  gap: 4.0rem;
+}
+
+
+#controlsTools button {
+  border: 0;
+  background-color: transparent;
+
+  font-size: 4.8rem;
+
+  color: var(--button-bg-active);
+}
+
+/* Session music*/
+
+#container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#container2 button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: 0;
+  border-radius: 2.4rem;
+
+  font-size: 4rem;
+  color: var(--button-bg-active);
+}
+
+#container2 button.active {
+  background: var(--button-bg-active);
+  color: var(--text-color-button-active);
+
+}
+
+@media (min-width: 1220px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+}
